@@ -13,6 +13,9 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	//defines which URL paths should be secured and which should not.
+	//Specifically, the / and /home paths are configured to not require any authentication.
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
